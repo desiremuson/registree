@@ -48,7 +48,7 @@ export default {
     degreeService
       .getAllDegree()
       .then(response => {
-        this.degrees = response.data
+        this.degrees = response[0].data.concat(response[1].data)
       })
       .catch(err => console.log(err))
   }
